@@ -35,10 +35,13 @@ class OfficialServiceCardTopLeft extends OfficialServiceCard {
             Align(
               alignment: Alignment.bottomLeft,
               child: SizedBox.square(
-                dimension: constraint.maxWidth,
+                dimension: constraint.maxWidth * 0.77,
                 child: Align(
                   alignment: Alignment.bottomLeft,
-                  child: Assets.svg.illustrationsRideFlow.svg(width: 220),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 8),
+                    child: Assets.svg.illustrationsRideFlow.svg(width: 160),
+                  ),
                 ),
               ),
             ),

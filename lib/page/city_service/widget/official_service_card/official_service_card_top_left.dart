@@ -39,8 +39,8 @@ class OfficialServiceCardTopLeft extends OfficialServiceCard {
                 child: Align(
                   alignment: Alignment.bottomLeft,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 8),
-                    child: Assets.svg.illustrationsRideFlow.svg(width: 160),
+                    padding: EdgeInsets.only(left: 15),
+                    child: Assets.svg.illustrationsRideFlow.svg(width: 180),
                   ),
                 ),
               ),
@@ -52,15 +52,21 @@ class OfficialServiceCardTopLeft extends OfficialServiceCard {
                 spacing: 2.0,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  TPText(
-                    '騎妙',
-                    style: TPTextStyles.h3SemiBold,
-                    color: TPColors.white,
+                  Padding(
+                    padding: EdgeInsets.only(right: 8),
+                    child: TPText(
+                      '騎妙',
+                      style: TPTextStyles.h3SemiBold,
+                      color: TPColors.white,
+                    ),
                   ),
-                  TPText(
-                    'RideFlow',
-                    style: TPTextStyles.bodyRegular,
-                    color: TPColors.white,
+                  Padding(
+                    padding: EdgeInsets.only(right: 8),
+                    child: TPText(
+                      'RideFlow',
+                      style: TPTextStyles.bodyRegular,
+                      color: TPColors.white,
+                    ),
                   ),
                 ],
               ),

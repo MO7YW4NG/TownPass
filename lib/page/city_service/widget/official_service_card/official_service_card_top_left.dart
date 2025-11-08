@@ -3,6 +3,7 @@ import 'package:town_pass/gen/assets.gen.dart';
 import 'package:town_pass/page/city_service/widget/official_service_card/official_service_card.dart';
 import 'package:town_pass/util/tp_colors.dart';
 import 'package:town_pass/util/tp_constant.dart';
+import 'package:town_pass/util/tp_route.dart';
 import 'package:town_pass/util/tp_text.dart';
 
 class OfficialServiceCardTopLeft extends OfficialServiceCard {
@@ -12,9 +13,9 @@ class OfficialServiceCardTopLeft extends OfficialServiceCard {
   Widget layoutBuild(BuildContext context, BoxConstraints constraint) {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      onTap: () async {
-        // TODO: add url
-      },
+      onTap: () async => await TPRoute.openUri(
+        uri: 'https://rideflow.motywang.workers.dev/',
+      ),
       child: Container(
         height: constraint.maxWidth / goldenRatio,
         decoration: BoxDecoration(
@@ -34,10 +35,10 @@ class OfficialServiceCardTopLeft extends OfficialServiceCard {
             Align(
               alignment: Alignment.bottomLeft,
               child: SizedBox.square(
-                dimension: constraint.maxWidth * 0.67,
+                dimension: constraint.maxWidth,
                 child: Align(
                   alignment: Alignment.bottomLeft,
-                  child: Assets.svg.illustrationsGov.svg(),
+                  child: Assets.svg.illustrationsRideFlow.svg(width: 220),
                 ),
               ),
             ),
@@ -49,12 +50,12 @@ class OfficialServiceCardTopLeft extends OfficialServiceCard {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   TPText(
-                    '市政服務',
+                    '騎妙',
                     style: TPTextStyles.h3SemiBold,
                     color: TPColors.white,
                   ),
                   TPText(
-                    'Service',
+                    'RideFlow',
                     style: TPTextStyles.bodyRegular,
                     color: TPColors.white,
                   ),

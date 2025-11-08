@@ -5,6 +5,11 @@ abstract final class TrendingServiceModel {
   static List<TrendingService> get serviceList {
     return [
       TrendingService(
+        title: '騎妙',
+        icon: Assets.svg.iconRideFlow24.svg(),
+        url: 'https://rideflow.motywang.workers.dev/',
+      ),
+      TrendingService(
         title: '找地點',
         icon: Assets.svg.iconLocationSearch.svg(),
         url: 'https://taipei-pass-service.vercel.app/surrounding-service/',
